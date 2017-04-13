@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane fx:id="parent" prefHeight="350" prefWidth="550" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.planb.eraser.fx.controller.GetUserData2Controller">
+	<children>
+		<Label alignment="center" layoutX="0" layoutY="30" prefWidth="550" styleClass="label-bright" text="파일들 중 찾고자 하는 용량의 범위를 입력해주세요. (3단계 중 2단계)">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Label>
+		
+		<TextField fx:id="minCapacityField" alignment="CENTER" disable="true" layoutX="100.0" layoutY="202.0" prefHeight="15.0" prefWidth="180" promptText="최소 용량">
+         <font>
+            <Font size="11.0" />
+         </font></TextField>
+		<TextField fx:id="maxCapacityField" alignment="CENTER" disable="true" layoutX="319.0" layoutY="202.0" prefWidth="180" promptText="최대 용량" />
+		<Label fx:id="waveDashLabel" disable="true" layoutX="295.0" layoutY="206.0" text="~" /> 
+		
+		<ComboBox fx:id="capacityTypeComboBox" layoutX="100.0" layoutY="128.0" prefWidth="180.0" promptText="용량의 단위 선택" visibleRowCount="5">
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+					<String fx:value="모든 파일에 대해 검색" />
+					<String fx:value="Byte" />
+					<String fx:value="KB" />
+					<String fx:value="MB" />
+					<String fx:value="GB" />
+				</FXCollections>
+			</items>
+		</ComboBox>
+		<Label layoutX="79.0" layoutY="131.0" text="1.">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Label>
+		<Label fx:id="number2Label" disable="true" layoutX="78.0" layoutY="210.0" text="2.">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Label>
+		<Button fx:id="nextButton" disable="true" layoutX="440.0" layoutY="305.0" prefHeight="20.0" prefWidth="96.0" text="다음 &gt; " />
+      <Label layoutX="117.0" layoutY="53.0" prefHeight="21.0" prefWidth="313.0" styleClass="label-bright" text="용량 선택 후 미입력시 모든 범위에서 찾습니다." textAlignment="CENTER" />
+	</children>
+</AnchorPane>

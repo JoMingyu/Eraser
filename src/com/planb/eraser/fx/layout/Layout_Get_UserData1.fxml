@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="parent" prefHeight="350" prefWidth="550" stylesheets="@DarkTheme.css" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.planb.eraser.fx.controller.GetUserData1Controller">
+	<children>
+		<Label alignment="center" layoutX="0" layoutY="30" prefWidth="550" text="중복된 파일의 삭제 옵션을 고르세요. (3단계 중 1단계)">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Label>
+		
+		<fx:define>
+			<ToggleGroup fx:id="deleteOptionToggle" />
+		</fx:define>
+		<RadioButton styleClass="label-bright" layoutX="60" layoutY="80" text="휴지통으로 보내기" userData="toRecycler" toggleGroup="$deleteOptionToggle" />
+		<Label layoutX="80" layoutY="105" text="중복된 파일을 하나만 남기고 자동으로 휴지통으로 보냅니다."></Label>
+		
+		<RadioButton styleClass="label-bright" layoutX="60" layoutY="150" text="즉시 삭제" userData="direct" toggleGroup="$deleteOptionToggle" />
+		<Label layoutX="80" layoutY="175" text="중복된 파일을 휴지통으로 보내지 않고 즉시 삭제합니다."></Label>
+		
+		<RadioButton styleClass="label-bright" layoutX="60" layoutY="220" text="삭제하지 않고 알려주기" userData="view" toggleGroup="$deleteOptionToggle" />
+		<Label layoutX="80" layoutY="245" text="중복된 파일을 삭제하지 않고 보여줍니다."></Label>
+		
+		<Button fx:id="nextButton" disable="true" layoutX="440.0" layoutY="305.0" prefHeight="20.0" prefWidth="96.0" text="다음 > " />
+	</children>
+</AnchorPane>

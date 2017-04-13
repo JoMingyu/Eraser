@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="parent" prefHeight="650.0" prefWidth="950.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.planb.eraser.fx.controller.ShowEquivalentFilesController">
+   <children>
+      <TableView fx:id="tableView" layoutX="23.0" layoutY="14.0" prefHeight="622.0" prefWidth="904.0">
+        <columns>
+          <TableColumn prefWidth="211.0" text="파일명" />
+          <TableColumn prefWidth="539.0" text="경로" />
+            <TableColumn prefWidth="138.0" text="현재 상태" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

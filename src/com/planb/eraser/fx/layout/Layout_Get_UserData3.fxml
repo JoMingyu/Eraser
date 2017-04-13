@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="parent" prefHeight="350" prefWidth="550" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.planb.eraser.fx.controller.GetUserData3Controller">
+	<children>
+		<Label alignment="center" layoutX="0" layoutY="30" prefWidth="550" text="파일들 중 찾고자 하는 최근 수정일자의 범위를 입력해주세요. (3단계 중 3단계)">
+		<font>
+			<Font size="14.0" />
+		</font>
+		</Label>
+		<Label layoutX="267.0" layoutY="150.0" text="~" /> 
+		<DatePicker fx:id="startDatePicker" layoutX="69.0" layoutY="146.0" prefHeight="23.0" prefWidth="170.0" promptText="2000. 1. 1" />
+		<DatePicker fx:id="endDatePicker" layoutX="304.0" layoutY="146.0" prefHeight="23.0" prefWidth="170.0" />
+		<Button fx:id="nextButton" layoutX="440.0" layoutY="305.0" prefHeight="20.0" prefWidth="96.0" text="다음 &gt; " />
+      <Label alignment="center" layoutX="5.0" layoutY="51.0" prefWidth="550" text="미입력 시 전체 범위에서 찾습니다.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+	</children>
+</AnchorPane>
